@@ -5,12 +5,11 @@
   <meta name="generator" content="PSPad editor, www.pspad.com">
   </head>
   <body>
-    <title>MELNIKOV.AN</title>
+    <title>MELNIKOV.A</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <body>
         <div class="container">
             <div class="row">
                 <div class="col-12"> 
@@ -36,12 +35,26 @@
         <div class="container">
             <div class="row">
                 <div class="button_js col-12">
-                    <button id="myButton">Посхалочка</button>
-                    <p id="demo"></p>
+                    <button id="myButton" onclick="toggleImage()">Click me</button>
+                    <div id="imageContainer"></div>
+                    <script>
+                        var imageAdded = false;
+                        function toggleImage() {
+                            var container = document.getElementById('imageContainer');
+                            if (imageAdded) {
+                                container.innerHTML = '';
+                                imageAdded = false;
+                            } else {
+                                var img = document.createElement('img');
+                                img.src = 'img/kit.jpg'; // Замените на путь к вашему изображению
+                                img.alt = 'Описание изображения'; // Замените на описание изображения
+                                container.appendChild(img);
+                                imageAdded = true;
+                            }
+                        }
+                        </script>
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="js/button.js"></script>
-    </body>
   </body>
 </html>

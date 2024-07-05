@@ -7,7 +7,7 @@ document.getElemetnById("myButton").onclick = function () {
         //создадим элемент img
         var img = document.createElement("img");
         //установим источник изображения
-        img.src = "../img/kit.jpg";
+        img.src = "https://i.imgur.com/zC7hzhE.jpg";
         document.getElementById("demo").appendChild(img);
     }
 }
